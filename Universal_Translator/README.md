@@ -10,19 +10,19 @@ Spanish speaking employees.
 
 1.  Before running main.py, make sure that you have ran this in the command line:
 
-    pip install translate
+    `pip install translate`
 
     This is the only required installation beyond Python.
 
-2.  Run "python3 main.py" and follow the prompts. It's that simple.
+2.  Run `python3 main.py` and follow the prompts. It's that simple.
 
 
 ## How to Use through Docker
 
 1.  Pull the image using this command (assuming you have docker installed properly):
 
-    docker pull tkduncan/universal_translator:1.0
+    `docker pull tkduncan/universal_translator:1.0`
 
 2.  Make sure to run the container in interactive mode with auto-remove and follow the prompts:
 
-    docker run -it --rm tkduncan/universal_translator:1.0
+    `docker run -it --rm tkduncan/universal_translator:1.0`
