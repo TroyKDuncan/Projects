@@ -3,7 +3,7 @@
 This is a universal translation app that is containerized through Docker, or usable through the CLI.
 It handles errors with exceptions without breaking the program and is very easy to read and understand.
 This will be used in the restaurant that I work in to facilitate communicaton between English and 
-Spanish speaking employees.
+Spanish speaking employees. I actually plan on making it a web app that is easily accessible.
 
 
 ## How to Use in the CLI
