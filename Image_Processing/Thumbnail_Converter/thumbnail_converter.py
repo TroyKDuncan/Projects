@@ -9,19 +9,19 @@ import os
 from PIL import Image
 
 # grab first and second argument
-jpg_folder = sys.argv[1]
-png_folder = sys.argv[2]
+path = sys.argv[1]
+new_folder = sys.argv[2]
 
 # check if second folder exists and if not, create it
 try:
-    os.makedirs(png_folder)
+    os.makedirs(new_folder)
 except FileExistsError:
     pass
 
-# loop through first folder, convert everything and save in the second folder
-for filename in os.listdir(jpg_folder):
-    img = Image.open(f'{jpg_folder}{filename}')
+# loop through first folder, converting everything to thumbnail PNGs and save in the second folder
+for filename in os.listdir(path):
+    img = Image.open(f'{path}{filename}')
     clean_name = os.path.splitext(filename)[0]
-    img.save(f'{png_folder}{clean_name}.png', 'png')
+    img.thumbnail((400,400))
+    img.save(f'{new_folder}{clean_name}.png', 'png')
     print(f'Image {filename} converted successfully!')
-
