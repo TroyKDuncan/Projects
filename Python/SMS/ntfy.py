@@ -5,5 +5,7 @@ requests.post("https://ntfy.sh/test_tkd",
     headers={
         "Title": "Unauthorized access detected",
         "Priority": "urgent",
-        "Tags": "warning"
+        "Tags": "warning",
+        # "Delay": "0m",
+        "Click": "mailto: troyduncanbusiness@gmail.com"
               })
