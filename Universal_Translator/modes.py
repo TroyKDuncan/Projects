@@ -4,7 +4,8 @@ from translate import Translator
 def live_translate(language_code):
     translator = Translator(to_lang=language_code)
     while True:
-        text = input('What would you like to translate? Or enter "q" to quit\n')
+        text = input(
+            'What would you like to translate? Or enter "q" to quit\n')
         print()
         if text.lower() != 'q':
             print(f'Translation: {translator.translate(text)}')
