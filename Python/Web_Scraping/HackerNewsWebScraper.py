@@ -25,6 +25,7 @@ combined_links = links + links2
 combined_subtext = subtext + subtext2
 
 
+# How to sort a Dictionary based on a specific value
 def sort_stories_by_votes(hnlist):
     return sorted(hnlist, key=lambda k: k['votes'], reverse=True)
 
@@ -43,3 +44,11 @@ def create_custom_hn(links, subtext):
 
 
 pprint.pprint(create_custom_hn(combined_links, combined_subtext))
+
+
+# What's next?
+
+# 1. Check websites for APIs
+# 2. If no API, try BeautfulSoup (library) and Scrapy (framework)
+# 3. How do you want to store data? Maybe txt files, but data bases for massive amounts of data
+# 4. Be ethical, don't break the law
