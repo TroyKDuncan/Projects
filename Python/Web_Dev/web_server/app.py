@@ -3,21 +3,16 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route("/<username>/<int:my_num>")
-def hello_world(username=None, my_num=None):
-    return render_template('index.html', name=username, on_page_num=my_num)
+@app.route("/")
+def home():
+    return render_template('index.html')
 
 
-@app.route("/about")
-def about():
-    return render_template('about.html')
+@app.route("/<string:page_name>")
+def html_page(page_name):
+    return render_template(page_name)
 
 
-@app.route("/blog")
-def blog():
-    return "I made a new blog!"
-
-
-@app.route("/blog/2020/dogs")
-def blog2():
-    return "I want a doggy!"
+@app.route("/submit_form", methods=['POST', 'GET'])
+def submit_form(page_name):
+    return "Form was submitted"
