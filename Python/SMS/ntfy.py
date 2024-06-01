@@ -1,4 +1,6 @@
 import requests
 
-requests.post("https://ntfy.sh/test_tkd",
-    data="This is literally the easiest thing to use in the whole world!".encode(encoding='utf-8'))
+
+def send_ntfy():
+    requests.post("https://ntfy.sh/tkd_portfolio_form_submission",
+                  data="Someone just submittd a form to your portfolio site!".encode(encoding='utf-8'))
