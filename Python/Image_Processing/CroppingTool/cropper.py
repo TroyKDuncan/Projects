@@ -2,12 +2,8 @@ from PIL import Image
 import sys
 import os
 
-# img = Image.open('./Logos/Hazing_SS.png')
 
-# cropped_img = img.crop((785,1620,3060,2190))
-# cropped_img.save('Cropped/cropped_H_SS.png', 'PNG')
-
-
+# check if user is done
 def check_if_done():
     while True:
         choice = input("Done cropping? y/n \n")
@@ -15,6 +11,8 @@ def check_if_done():
             return choice
         else:
             print('Invalid choice. Try again.\n')
+
+# keep cropping until you're satisfied
 
 
 def cropper(img) -> Image:
@@ -29,6 +27,9 @@ def cropper(img) -> Image:
         cropped_img.save(f'{cropped_folder}/cropped_{clean_name}.png', 'PNG')
         if check_if_done() == 'y':
             return cropped_img
+
+# check that the file being checked is an image
+
 
 def is_image(filename):
     valid_extensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff']
